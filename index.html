@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-	<meta charset="UTF-8">
-	<title>1inks</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="refresh" content="0; url=https://drive.google.com/drive/folders/1-OKTsALUn3N1l9ICD1KMyQjRSF3qkj-B" />
-	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-	</head>
-<body>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CKEditor 4 with Maximize Screen Setting</title>
+    <script src="https://cdn.ckeditor.com/4.10.1/full/ckeditor.js"></script>
+  </head>
+  <body>
+    <textarea id="ckeditor1" name="editor1">
+      <link href="https://new.cle.ntust.edu.tw/ezfiles/110/1110/static/combine-zh-tw.css" rel="stylesheet" type="text/css" />
+    </textarea>
+<script>
+  CKEDITOR.on('instanceReady',
+    function( evt ) {
+      var editor = evt.editor;
+      editor.execCommand('maximize');
+    }
+  );
+
+CKEDITOR.replace( 'editor1', {
+  allowedContent: true
+});
+</script>
+  </body>
 </html>
