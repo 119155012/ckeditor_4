@@ -6,20 +6,21 @@
     <script src="https://cdn.ckeditor.com/4.10.1/full/ckeditor.js"></script>
   </head>
   <body>
-    <textarea id="ckeditor1" name="editor1">
-      <link href="https://new.cle.ntust.edu.tw/ezfiles/110/1110/static/combine-zh-tw.css" rel="stylesheet" type="text/css" />
-    </textarea>
+    <textarea id="ckeditor1" name="editor1"></textarea>
 <script>
-  CKEDITOR.on('instanceReady',
-    function( evt ) {
-      var editor = evt.editor;
-      editor.execCommand('maximize');
-    }
-  );
-
 CKEDITOR.replace( 'editor1', {
-  allowedContent: true
-});
+  allowedContent: true,
+  enterMode: CKEDITOR.ENTER_BR,
+  basicEntities: false, 
+  contentsCss: 'https://new.cle.ntust.edu.tw/ezfiles/110/1110/static/combine-zh-tw.css'
+		});
+
+CKEDITOR.on('instanceReady',
+  function( evt ) {
+    var editor = evt.editor;
+    editor.execCommand('maximize');
+  }
+);
 </script>
   </body>
 </html>
