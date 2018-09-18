@@ -8,6 +8,10 @@
   <body>
     <textarea id="ckeditor1" name="editor1"></textarea>
 <script>
+window.onbeforeunload = function(){
+  return "onbeforeunload";
+}
+
 CKEDITOR.replace( 'editor1', {
   allowedContent: true,
   dialog_noConfirmCancel: false,
